@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="./Assets/favicon-32x32.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Nintedo | Re-Imagine</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="logo-main">
+                <img src="./Assets/Nintendo_red_logo.svg.png" alt="logo" class="logo" />
+            </div>
+            <div class="slscm align-center">
+                <div class="searchbar">
+                    <input type="text" placeholder="Search..." class="search" />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="login-Signup">
+                    <a href="#" class="ls">Log In</a>
+                    <a href="#" class="ls">Sign Up</a>
+                </div>
+                <div class="cart align-center">
+                    <a href="#"><img src="./Assets/cart.svg" alt="cart" class="cart-icon" height="20px" /></a>
+                </div>
+                <div class="menu" onclick="this.classList.toggle('active')">
+                    <svg class="ham hamRotate180 ham5" viewBox="0 0 100 100" width="70" onclick="this.classList.toggle('active')">
+                        <path
+                              class="line top"
+                              d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429" />
+                        <path
+                              class="line middle"
+                              d="m 70,50 h -40" />
+                        <path
+                              class="line bottom"
+                              d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429" />
+                      </svg>
+                    <div class="toolBox">
+                        <div class="triangle"></div>
+                        <div class="links-main">
+                        <ul class="links">
+                            <li class="link-list"><a href="" class="link align-center">All Categories <i class="fa-solid fa-angle-down"></i></a></li>
+                            <li class="link-list"><a href="" class="link align-center">My Nintendo Store <i class="fa-solid fa-angle-down"></i></a></li>
+                            <li class="link-list"><a href="" class="link align-center">Games <i class="fa-solid fa-angle-down"></i></a></li>
+                            <li class="link-list"><a href="" class="link align-center">Nintendo switch <i class="fa-solid fa-angle-down"></i></a></li>
+                            <li class="link-list"><a href="https://play.nintendo.com/" target="_blank" class="link align-center">Play Nintendo</a></li>
+                        </ul>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="banner">
+        <div class="slider-wrapper">
+            <div class="slider-item">
+                <figure>
+                    <video loop autoplay muted>
+                        <h1 class="video-title">Help Luigi get in this fun and spooky adventure - pre-order now, launches 6/27</h1>
+                        <source src="/Assets/mario1.mp4" type="video/mp4">
+                      </video>
+                </figure>
+            </div>
+            <div class="slider-item">
+                <figure>
+                    <video loop autoplay muted>
+                        <source src="/Assets/02.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                </figure>
+            </div>
+            <div class="slider-item">
+                <figure>
+                    <video loop autoplay muted>
+                        <source src="/Assets/03.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                </figure>
+            </div>
+            <div class="slider-item">
+                <figure>
+                    <video loop autoplay muted>
+                        <source src="/Assets/03.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                </figure>
+            </div>
+        </div>
+        <div class="cursor">
+            <i class="fa-solid fa-caret-left"></i>
+            <i class="fa-solid fa-caret-right"></i>
+        </div>
+        
+    </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
