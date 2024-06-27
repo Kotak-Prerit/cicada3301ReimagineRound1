@@ -226,7 +226,6 @@ body {
   will-change: transform;
   transition: transform 0.3s ease-out;
     scrollbar-width: none;
-    background: #E60012;
 }
 
 .slider-item{
@@ -283,10 +282,10 @@ body {
 }
 
 
-.❤{
+.news-card-container{
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
+    justify-content: space-between;
+    margin-top: 15px;
     height: auto;
     flex-wrap: wrap;
 }
@@ -294,14 +293,12 @@ body {
 
 .🃏{
     position: relative;
-    border-radius: 10px;
     margin: 10px;
     width: 300px;
     height: 500px;
     background: #fff;
     transform-style: preserve-3d;
     transform: perspective(1000px);
-    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
 }
 
 .📦{
@@ -311,14 +308,11 @@ body {
     z-index: 1;
     transform-origin: left;
     transform-style: preserve-3d;
-    box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
     background: #000;
-    border-radius: 10px;
     transition: 1s ease;
 }
 
-img{
-    border-radius: 10px;
+.img{
     position: absolute;
     top: 0;
     left: 0;
@@ -366,7 +360,7 @@ p{
     color: #000;
 }
 
-a{
+.📚 > a{
     margin: 20px;
     text-align: center;
     text-decoration: none;
@@ -375,7 +369,17 @@ a{
     letter-spacing: 1px;
     color: #fff;
 }
-a:hover{
+.📚 > a:hover{
     background: rgb(255, 0, 0);
     transition: 0.3s ease;
+}
+.news-heading{
+    margin-top: 15vh;
+    width: 100%;
+    padding-inline: 1vw;
+}
+.news{
+    font-size: 30px;
+    color: #E60012;
+    font-weight: 800;
 }
