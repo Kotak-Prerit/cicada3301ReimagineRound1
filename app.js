@@ -2,114 +2,73 @@ const menu = document.querySelector('.menu')
 const toolbox = document.querySelector('.toolBox')
 const cursor = document.querySelector('.cursor')
 const hamburger = document.querySelector('.hamburger')
+const slider = document.querySelector('.slider-wrapper')
+const slider_item = document.querySelector('.slider-item')
+const left = document.querySelector('.btn-left')
+const right = document.querySelector('.btn-right')
+const character_wrapper = document.querySelector('.char-img-wrapper')
+const images = document.querySelectorAll('.char-img');
+const arrow = document.querySelector('.arrow')
 
+//Menu
 menu.addEventListener('click', function () {
     toolbox.classList.toggle("menuActive")
     hamburger.classList.toggle('is-active')
 })
 
-const banner = document.querySelector('.banner')
-const slider = document.querySelector('.slider-wrapper'),
-    slides = Array.from(document.querySelectorAll('.slider-item'))
+//Slider
+slider.addEventListener('mousedown', e => {
+    slider.dataset.mouseDownAt = e.clientX;
+    slider.classList.add('grabbing');
+});
 
-let isDragging = false,
-    StartPosition = 0,
-    currentTranslate = 0,
-    prevTranslate = 0,
-    animationId = 0,
-    Index = 0
+slider.addEventListener('mousemove', e => {
+    if (slider.dataset.mouseDownAt === "0") return;
 
-slides.forEach((slide, i) => {
+    const mouseDelta = parseFloat(slider.dataset.mouseDownAt) - e.clientX,
+        maxDelta = window.innerWidth / 1.5;
 
-    // Touch events
-    slide.addEventListener('touchstart', touchStart(i))
-    slide.addEventListener('touchend', touchEnd)
-    slide.addEventListener('touchmove', touchMove)
+    const percentage = (mouseDelta / maxDelta) * -63,
+        nextPercentageUnconstrained = parseFloat(slider.dataset.prevPercentage) + percentage,
+        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -63);
 
-    // Mouse events
-    slide.addEventListener('mousedown', touchStart(i))
-    slide.addEventListener('mouseup', touchEnd)
-    slide.addEventListener('mouseleave', touchEnd)
-    slide.addEventListener('mousemove', touchMove)
-})
+    slider.dataset.percentage = nextPercentage;
 
-// make responsive to viewport changes
-window.addEventListener('resize', setPositionByIndex)
+    slider.style.transform = `translate(${nextPercentage}%, -50%)`;
 
-function touchStart(index) {
-    return function (event) {
-        Index = index
-        StartPosition = getPositionX(event)
-        console.log(StartPosition);
-        isDragging = true;
 
-        animationId = requestAnimationFrame(animation)
-        slider.classList.add('grabbing')
+});
+
+slider.addEventListener('mouseup', () => {
+    slider.dataset.mouseDownAt = "0";
+    slider.dataset.prevPercentage = slider.dataset.percentage;
+    slider.classList.remove('grabbing');
+});
+
+slider.addEventListener('mouseleave', () => {
+    if (slider.classList.contains('grabbing')) {
+        slider.dataset.mouseDownAt = "0";
+        slider.dataset.prevPercentage = slider.dataset.percentage;
+        slider.classList.remove('grabbing');
     }
-}
-function touchEnd() {
-    cancelAnimationFrame(animationId)
-    isDragging = false
-    const movedBy = currentTranslate - prevTranslate
-    
-    // if moved enough negative then snap to next slide if there is one
-    if (movedBy < -100 && Index < slides.length - 1) Index += 1
-    
-    // if moved enough positive then snap to previous slide if there is one
-    if (movedBy > 100 && Index > 0) Index -= 1
+});
 
-    setPositionByIndex()
-    
-    slider.classList.remove('grabbing')
-}
+//Carausol
+const numImages = images.length;
+let translation = 0;
 
-function touchMove(event) {
-    if (isDragging) {
-        const currentPosition = event.clientX
-        currentTranslate = prevTranslate + currentPosition - StartPosition
+left.addEventListener('click', () => {
+    arrow.style.display = "none";
+    if (translation < 0) {
+      translation += 100;
+      character_wrapper.style.transform = `translateX(${translation}%)`;
     }
-}
-
-function getPositionX(event) {
-    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX
-}
-
-function animation() {
-    setSliderPosition()
-    if (isDragging) requestAnimationFrame(animation)
-}
-
-function setPositionByIndex() {
-    currentTranslate = Index * -window.innerWidth
-    prevTranslate = currentTranslate
-    setSliderPosition()
-}
-
-function setSliderPosition() {
-    slider.style.transform = `translateX(${currentTranslate}px)`
-}
-
-
-// const animateTrailer = (e, interacting) => {
-//   const x = e.clientX - cursor.offsetWidth / 2,
-//         y = e.clientY - cursor.offsetHeight / 2;
+});
   
-//   const keyframes = {
-//     transform: `translate(${x}px, ${y}px) scale(${interacting ? 8 : 1})`
-//   }
-  
-//   cursor.animate(keyframes, { 
-//     duration: 800, 
-//     fill: "forwards" 
-//   });
-// }
-
-// window.onmousemove = e => {
-//     const interactable = e.target.closest(".slider-wrapper"),
-//           interacting = interactable !== null;
-    
-//     animateTrailer(e, interacting);
-    
-//     cursor.dataset.type = interacting ? interactable.dataset.type : "";
-    
-//   }
+right.addEventListener('click', () => {
+    arrow.style.display = "none";
+    if (translation > -100 * (numImages - 1)) {
+      translation -= 100;
+      character_wrapper.style.transform = `translateX(${translation}%)`;
+    }
+});

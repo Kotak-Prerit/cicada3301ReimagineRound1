@@ -15,8 +15,8 @@
 <body>
     <div class="main">
         <div class="navbar">
-            <div class="logo-main">
-                <img src="./Assets/Nintendo_red_logo.svg.png" alt="logo" class="logo" />
+            <div class="logo-main align-center">
+                <img src="./Assets/logo.png" alt="logo" class="logo" />
             </div>
             <div class="slscm align-center">
                 <div class="searchbar">
@@ -26,152 +26,92 @@
                 <div class="login-Signup">
                     <a href="#" class="ls">Log In</a>
                     <a href="#" class="ls">Sign Up</a>
+                    <i class="fa-solid fa-user-plus"></i>
                 </div>
                 <div class="cart align-center">
-                    <a href="#"><img src="./Assets/cart.svg" alt="cart" class="cart-icon" height="20px" /></a>
+                    <a href="#" class="align-center"><img src="./Assets/cart.svg" alt="cart" class="cart-icon" height="20px" /></a>
                 </div>
-                <div class="menu" onclick="this.classList.toggle('active')">
-                    <svg class="ham hamRotate180 ham5" viewBox="0 0 100 100" width="70" onclick="this.classList.toggle('active')">
-                        <path
-                              class="line top"
-                              d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429" />
-                        <path
-                              class="line middle"
-                              d="m 70,50 h -40" />
-                        <path
-                              class="line bottom"
-                              d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429" />
-                      </svg>
+                <div class="menu align-center" onclick="this.classList.toggle('active')">
+                    <svg class="ham hamRotate180 ham5" viewBox="0 0 100 100" width="50" height="50"
+                        onclick="this.classList.toggle('active')">
+                        <path class="line top"
+                            d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429" />
+                        <path class="line middle" d="m 70,50 h -40" />
+                        <path class="line bottom"
+                            d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429" />
+                    </svg>
                     <div class="toolBox">
                         <div class="triangle"></div>
                         <div class="links-main">
-                        <ul class="links">
-                            <li class="link-list"><a href="" class="link align-center">All Categories <i class="fa-solid fa-angle-down"></i></a></li>
-                            <li class="link-list"><a href="" class="link align-center">My Nintendo Store <i class="fa-solid fa-angle-down"></i></a></li>
-                            <li class="link-list"><a href="" class="link align-center">Games <i class="fa-solid fa-angle-down"></i></a></li>
-                            <li class="link-list"><a href="" class="link align-center">Nintendo switch <i class="fa-solid fa-angle-down"></i></a></li>
-                            <li class="link-list"><a href="https://play.nintendo.com/" target="_blank" class="link align-center">Play Nintendo</a></li>
-                        </ul>
+                            <ul class="links">
+                                <li class="link-list"><a href="" class="link align-center">All Categories <i
+                                            class="fa-solid fa-angle-down"></i></a></li>
+                                <li class="link-list"><a href="" class="link align-center">My Nintendo Store <i
+                                            class="fa-solid fa-angle-down"></i></a></li>
+                                <li class="link-list"><a href="" class="link align-center">Games <i
+                                            class="fa-solid fa-angle-down"></i></a></li>
+                                <li class="link-list"><a href="" class="link align-center">Nintendo switch <i
+                                            class="fa-solid fa-angle-down"></i></a></li>
+                                <li class="link-list"><a href="https://play.nintendo.com/" target="_blank"
+                                        class="link align-center">Play Nintendo</a></li>
+                            </ul>
+                        </div>
                     </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="slider">
+        <div class="slider-wrapper" data-mouse-down-at="0" data-prev-percentage="0">
+            <div class="slider-item">
+                <h1 class="video-heading">Super Mario™ 3D World + Bowser’s Fury</h1>
+                <video loop autoplay muted controls controlsList="nodownload">
+                    <source src="/Assets/mario2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slider-item">
+                <h1 class="video-heading">Luigi's Mansion™ 2 HD</h1>
+                <video loop muted controls controlsList="nodownload">
+                    <source src="/Assets/mario1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slider-item">
+                <h1 class="video-heading">Super Mario™ 3D World + Bowser’s Fury</h1>
+                <video loop muted controls controlsList="nodownload">
+                    <source src="/Assets/mario2.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="slider-item">
+                <h1 class="video-heading">Luigi's Mansion™ 2 HD</h1>
+                <video loop muted controls controlsList="nodownload">
+                    <source src="/Assets/mario1.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="characters">
+        <h1 class="charHeading"> Characters</h1>
+        <div class="charSlider">
+            <img src="/Assets/arrow.png" alt="click" class="arrow">
+            <div class="switch-wrapper">
+                <img src="/Assets/switch.png" alt="nintendo-switch" class="switch">
+                <div class="btn-up align-center"><i class="fa-solid fa-caret-up"></i></div>
+                <div class="btn-down align-center"><i class="fa-solid fa-caret-down"></i></div>
+                <div class="btn-left align-center"><i class="fa-solid fa-caret-left"></i></div>
+                <div class="btn-right align-center"><i class="fa-solid fa-caret-right"></i></div>
+                <div class="char-img-wrapper-container">
+                    <div class="char-img-wrapper">
+                        <img src="/Assets/papermario.jpg" alt="char1" class="char-img">
+                        <img src="/Assets/zelda.jpg" alt="char1" class="char-img">
+                        <img src="/Assets/splatoon.jpg" alt="char1" class="char-img">
+                        <img src="/Assets/papermario.jpg" alt="char1" class="char-img">
+                        <img src="/Assets/zelda.jpg" alt="char1" class="char-img">
                     </div>
                 </div>
             </div>
-            
         </div>
-    </div>
-    <div class="banner">
-        <div class="slider-wrapper">
-            <div class="slider-item">
-                <figure>
-                    <video loop autoplay muted>
-                        <h1 class="video-title">Help Luigi get in this fun and spooky adventure - pre-order now, launches 6/27</h1>
-                        <source src="/Assets/mario1.mp4" type="video/mp4">
-                      </video>
-                </figure>
-            </div>
-            <div class="slider-item">
-                <figure>
-                    <video loop autoplay muted>
-                        <source src="/Assets/02.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                </figure>
-            </div>
-            <div class="slider-item">
-                <figure>
-                    <video loop autoplay muted>
-                        <source src="/Assets/03.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                </figure>
-            </div>
-            <div class="slider-item">
-                <figure>
-                    <video loop autoplay muted>
-                        <source src="/Assets/03.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video>
-                </figure>
-            </div>
-        </div>
-        <div class="cursor">
-            <i class="fa-solid fa-caret-left"></i>
-            <i class="fa-solid fa-caret-right"></i>
-        </div>
-        
-    </div>
-    <div class="news-heading">
-        <h1 class="news">News</h1>
-    </div>
-    <div class="news-card-container">
-        <div class="🃏">
-            <div class="📦">
-                <img src="./Assets/mickey.jpg" title="Illusion Island" class="img">
-            </div>
-            <div class="🎶">
-                <div class="📚">
-                    <span>Illusion Island</span>
-                    <p>The 'Mystery in Monoth' update will see Mickey and the gang setting out to help detective Dash
-                        Dolphin solve you guessed it a mystery. You'll be hunting around Monoth for clues, mapping out
-                        locations on a cork board and using your answers to dig up the truth behind the central case.
-
-                        This free update is now available for all those with Disney Illusion Island on Switch.</p>
-                    <a
-                        href="https://www.nintendolife.com/news/2024/06/disney-illusion-island-scores-free-mystery-in-monoth-update-on-switch-today">Read
-                        More..</a>
-                </div>
-            </div>
-        </div>
-        <div class="🃏">
-            <div class="📦">
-                <img src="./Assets/demon.jpg" title="Demon Slayer" class="img">
-            </div>
-            <div class="🎶">
-                <div class="📚">
-                    <span>Demon Slayer</span>
-                    <p>Demon Slayer has gone on to become one of the most successful media franchises in existence—even
-                        passing up the likes of Sonic and Minecraft in raw sales. The only other game is Demon Slayer:
-                        The Hinokami Chronicles. This release came to other platforms, and now the Switch has come with
-                        all the post-launch DLC from those releases. We found Demon Slayer: The Hinokami Chronicles to
-                        be thoroughly enjoyable and we think you should consider giving it a shot.</p>
-                    <a href="https://youtu.be/d9QH-LXxSQ0"> Read More..</a>
-                </div>
-            </div>
-        </div>
-        <div class="🃏">
-            <div class="📦">
-                <img src="./Assets/pokemon.jpg" title="Pokemon Snap" class="img">
-            </div>
-            <div class="🎶">
-                <div class="📚">
-                    <span>Pokemon Snap</span>
-                    <p>It's been 22 years since the original Pokémon Snap and with each passing console generation fans
-                        had never given up hope for a possible sequel. Why is that? It wasn't a long game, it didn't
-                        have that many levels, only had a small pool of Pokémon and the base gameplay was simply about
-                        taking pictures. Snap presents Pokémon in their purest form; it lets Pokémon be Pokémon without
-                        any strings of battling attached something no other entry even attempts.</p>
-                    <a href="https://youtu.be/DMOBlEcRuw8">Read More..</a>
-                </div>
-            </div>
-        </div>
-        <div class="🃏">
-            <div class="📦">
-                <img src="./Assets/jjk.jpg" title="Jujutsu Kaisen" class="img">
-            </div>
-            <div class="🎶">
-                <div class="📚">
-                    <span>Jujutsu Kaisen</span>
-                    <p>Following its arrival on the Switch earlier in February, the two-on-two fighting game Jujutsu
-                        Kaisen Cursed Clash is now getting some new content.
-
-                        Bandai Namco will be releasing new DLC - adding the new playable characters Satoru Gojo
-                        (Student), Sugero Geto (Student), and Toji Fushiguro. This will come with an additional
-                        scenario, additional outfits, and more customisation items.</p>
-                    <a href="https://youtu.be/jir62_ptloI" cl>Read More..</a>
-                </div>
-            </div>
-        </div>
-    </div>
     </div>
 
     <script src="app.js"></script>
