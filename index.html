@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer type="module" src="app.js"></script>
     <title>Nintedo | Re-Imagine</title>
 </head>
 
@@ -66,31 +67,82 @@
         <div class="slider-wrapper" data-mouse-down-at="0" data-prev-percentage="0">
             <div class="slider-item">
                 <h1 class="video-heading">Super Mario™ 3D World + Bowser’s Fury</h1>
-                <video loop autoplay muted controls controlsList="nodownload">
-                    <source src="/Assets/mario2.mp4" type="video/mp4">
-                </video>
+                <img src="./Assets/01.png" alt="01" draggable="false">
             </div>
             <div class="slider-item">
                 <h1 class="video-heading">Luigi's Mansion™ 2 HD</h1>
-                <video loop muted controls controlsList="nodownload">
-                    <source src="/Assets/mario1.mp4" type="video/mp4">
-                </video>
+                <img src="./Assets/02.png" alt="02" draggable="false">
             </div>
             <div class="slider-item">
                 <h1 class="video-heading">Super Mario™ 3D World + Bowser’s Fury</h1>
-                <video loop muted controls controlsList="nodownload">
-                    <source src="/Assets/mario2.mp4" type="video/mp4">
-                </video>
+                <img src="./Assets/03.png" alt="03" draggable="false">
             </div>
             <div class="slider-item">
                 <h1 class="video-heading">Luigi's Mansion™ 2 HD</h1>
-                <video loop muted controls controlsList="nodownload">
-                    <source src="/Assets/mario1.mp4" type="video/mp4">
-                </video>
+                <img src="./Assets/04.jpg" alt="04" draggable="false">
             </div>
         </div>
+        <div class="cursor">
+            <i class="fa-solid fa-caret-left"></i>
+            <p>Drag</p>
+            <i class="fa-solid fa-caret-right"></i>
+        </div>
     </div>
-
+    <div class="line"><hr/></div>
+    <div class="featured">
+        <h1 class="featHeading"> Featured</h1>
+        <fieldset>
+            <label style="--img: url(./Assets/papermario.jpg)">
+                <div class="box">
+                    <div class="gameName">
+                        <p class="gname">Paper Mario: The Thousand-Year Door</p>
+                    </div>
+                    <div class="statusCo">
+                        <p class="status">Available now</p>
+                        <p class="Co">Nintendo Switch</p>
+                    </div>
+                </div>
+                <input type="radio" name="images" value="Fiddle Leaf">
+            </label>
+            <label style="--img: url(./Assets/ft02.avif)">
+                <div class="box">
+                    <div class="gameName">
+                        <p class="gname">Nintendo World Championships: NES™ Edition</p>
+                    </div>
+                    <div class="statusCo">
+                        <p class="status pre-order">Pre-order now</p>
+                        <p class="Co">Nintendo Switch</p>
+                    </div>
+                </div>
+                <input type="radio" name="images" value="Pink Princess">
+            </label>
+            <label style="--img: url(./Assets/ft03.avif)">
+                <div class="box">
+                    <div class="gameName">
+                        <p class="gname">The Legend of Zelda™: Echoes of Wisdom</p>
+                    </div>
+                    <div class="statusCo">
+                        <p class="status pre-order">Pre-order now</p>
+                        <p class="Co">Nintendo Switch</p>
+                    </div>
+                </div>
+                <input type="radio" name="images" value="Monstera" checked>
+            </label>
+            <label style="--img: url(./Assets/ft04.avif)">
+                <div class="box">
+                    <div class="gameName">
+                        <p class="gname">Super Mario Party™ Jamboree</p>
+                    </div>
+                    <div class="statusCo">
+                        <p class="status pre-order">Pre-order now</p>
+                        <p class="Co">Nintendo Switch</p>
+                    </div>
+                </div>
+                <input type="radio" name="images" value="Pothos">
+            </label>
+        </fieldset>
+    </div>
+    <div class="line"><hr/></div>
     <div class="characters">
         <h1 class="charHeading"> Characters</h1>
         <div class="charSlider">
@@ -113,8 +165,11 @@
             </div>
         </div>
     </div>
+    <div class="store">
 
-    <script src="app.js"></script>
+    </div>
+
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
 </body>
 
 </html>
