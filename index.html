@@ -1,175 +1,250 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="./Assets/favicon-32x32.png" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="shortcut icon"
+      href="./Assets/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script defer type="module" src="app.js"></script>
     <title>Nintedo | Re-Imagine</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="main">
-        <div class="navbar">
-            <div class="logo-main align-center">
-                <img src="./Assets/logo.png" alt="logo" class="logo" />
-            </div>
-            <div class="slscm align-center">
-                <div class="searchbar">
-                    <input type="text" placeholder="Search..." class="search" />
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-                <div class="login-Signup">
-                    <a href="#" class="ls">Log In</a>
-                    <a href="#" class="ls">Sign Up</a>
-                    <i class="fa-solid fa-user-plus"></i>
-                </div>
-                <div class="cart align-center">
-                    <a href="#" class="align-center"><img src="./Assets/cart.svg" alt="cart" class="cart-icon" height="20px" /></a>
-                </div>
-                <div class="menu align-center" onclick="this.classList.toggle('active')">
-                    <svg class="ham hamRotate180 ham5" viewBox="0 0 100 100" width="50" height="50"
-                        onclick="this.classList.toggle('active')">
-                        <path class="line top"
-                            d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429" />
-                        <path class="line middle" d="m 70,50 h -40" />
-                        <path class="line bottom"
-                            d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429" />
-                    </svg>
-                    <div class="toolBox">
-                        <div class="triangle"></div>
-                        <div class="links-main">
-                            <ul class="links">
-                                <li class="link-list"><a href="" class="link align-center">All Categories <i
-                                            class="fa-solid fa-angle-down"></i></a></li>
-                                <li class="link-list"><a href="" class="link align-center">My Nintendo Store <i
-                                            class="fa-solid fa-angle-down"></i></a></li>
-                                <li class="link-list"><a href="" class="link align-center">Games <i
-                                            class="fa-solid fa-angle-down"></i></a></li>
-                                <li class="link-list"><a href="" class="link align-center">Nintendo switch <i
-                                            class="fa-solid fa-angle-down"></i></a></li>
-                                <li class="link-list"><a href="https://play.nintendo.com/" target="_blank"
-                                        class="link align-center">Play Nintendo</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+      <div class="navbar">
+        <div class="logo-main align-center">
+          <img src="./Assets/logo.png" alt="logo" class="logo" />
         </div>
+        <div class="slscm align-center">
+          <div class="searchbar">
+            <input type="text" placeholder="Search..." class="search" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="login-Signup">
+            <a href="#" class="ls">Log In</a>
+            <a href="#" class="ls">Sign Up</a>
+            <i class="fa-solid fa-user-plus"></i>
+          </div>
+          <div class="cart align-center">
+            <a href="#" class="align-center"
+              ><img
+                src="./Assets/cart.svg"
+                alt="cart"
+                class="cart-icon"
+                height="20px"
+            /></a>
+          </div>
+          <div
+            class="menu align-center"
+            onclick="this.classList.toggle('active')"
+          >
+            <svg
+              class="ham hamRotate180 ham5"
+              viewBox="0 0 100 100"
+              width="50"
+              height="50"
+              onclick="this.classList.toggle('active')"
+            >
+              <path
+                class="line top"
+                d="m 30,33 h 40 c 0,0 8.5,-0.68551 8.5,10.375 0,8.292653 -6.122707,9.002293 -8.5,6.625 l -11.071429,-11.071429"
+              />
+              <path class="line middle" d="m 70,50 h -40" />
+              <path
+                class="line bottom"
+                d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429"
+              />
+            </svg>
+            <div class="toolBox">
+              <div class="triangle"></div>
+              <div class="links-main">
+                <ul class="links">
+                  <li class="link-list">
+                    <a href="" class="link align-center"
+                      >All Categories <i class="fa-solid fa-angle-down"></i
+                    ></a>
+                  </li>
+                  <li class="link-list">
+                    <a href="" class="link align-center"
+                      >My Nintendo Store <i class="fa-solid fa-angle-down"></i
+                    ></a>
+                  </li>
+                  <li class="link-list">
+                    <a href="" class="link align-center"
+                      >Games <i class="fa-solid fa-angle-down"></i
+                    ></a>
+                  </li>
+                  <li class="link-list">
+                    <a href="" class="link align-center"
+                      >Nintendo switch <i class="fa-solid fa-angle-down"></i
+                    ></a>
+                  </li>
+                  <li class="link-list">
+                    <a
+                      href="https://play.nintendo.com/"
+                      target="_blank"
+                      class="link align-center"
+                      >Play Nintendo</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="slider">
-        <div class="slider-wrapper" data-mouse-down-at="0" data-prev-percentage="0">
-            <div class="slider-item">
-                <h1 class="video-heading">Super Mario™ 3D World + Bowser’s Fury</h1>
-                <img src="./Assets/01.png" alt="01" draggable="false">
-            </div>
-            <div class="slider-item">
-                <h1 class="video-heading">Luigi's Mansion™ 2 HD</h1>
-                <img src="./Assets/02.png" alt="02" draggable="false">
-            </div>
-            <div class="slider-item">
-                <h1 class="video-heading">Super Mario™ 3D World + Bowser’s Fury</h1>
-                <img src="./Assets/03.png" alt="03" draggable="false">
-            </div>
-            <div class="slider-item">
-                <h1 class="video-heading">Luigi's Mansion™ 2 HD</h1>
-                <img src="./Assets/04.jpg" alt="04" draggable="false">
-            </div>
+      <div
+        class="slider-wrapper"
+        data-mouse-down-at="0"
+        data-prev-percentage="0"
+      >
+        <div class="slider-item">
+          <h1 class="video-heading">Super Mario™ 3D World + Bowser’s Fury</h1>
+          <img src="./Assets/01.png" alt="01" draggable="false" />
         </div>
-        <div class="cursor">
-            <i class="fa-solid fa-caret-left"></i>
-            <p>Drag</p>
-            <i class="fa-solid fa-caret-right"></i>
+        <div class="slider-item">
+          <h1 class="video-heading">Luigi's Mansion™ 2 HD</h1>
+          <img src="./Assets/02.png" alt="02" draggable="false" />
         </div>
+        <div class="slider-item">
+          <h1 class="video-heading">Super Mario™ 3D World + Bowser’s Fury</h1>
+          <img src="./Assets/03.png" alt="03" draggable="false" />
+        </div>
+        <div class="slider-item">
+          <h1 class="video-heading">Luigi's Mansion™ 2 HD</h1>
+          <img src="./Assets/04.jpg" alt="04" draggable="false" />
+        </div>
+      </div>
+      <div class="cursor">
+        <i class="fa-solid fa-caret-left"></i>
+        <p>Drag</p>
+        <i class="fa-solid fa-caret-right"></i>
+      </div>
     </div>
-    <div class="line"><hr/></div>
+    <div class="line"><hr /></div>
     <div class="featured">
-        <h1 class="featHeading"> Featured</h1>
-        <fieldset>
-            <label style="--img: url(./Assets/papermario.jpg)">
-                <div class="box">
-                    <div class="gameName">
-                        <p class="gname">Paper Mario: The Thousand-Year Door</p>
-                    </div>
-                    <div class="statusCo">
-                        <p class="status">Available now</p>
-                        <p class="Co">Nintendo Switch</p>
-                    </div>
-                </div>
-                <input type="radio" name="images" value="Fiddle Leaf">
-            </label>
-            <label style="--img: url(./Assets/ft02.avif)">
-                <div class="box">
-                    <div class="gameName">
-                        <p class="gname">Nintendo World Championships: NES™ Edition</p>
-                    </div>
-                    <div class="statusCo">
-                        <p class="status pre-order">Pre-order now</p>
-                        <p class="Co">Nintendo Switch</p>
-                    </div>
-                </div>
-                <input type="radio" name="images" value="Pink Princess">
-            </label>
-            <label style="--img: url(./Assets/ft03.avif)">
-                <div class="box">
-                    <div class="gameName">
-                        <p class="gname">The Legend of Zelda™: Echoes of Wisdom</p>
-                    </div>
-                    <div class="statusCo">
-                        <p class="status pre-order">Pre-order now</p>
-                        <p class="Co">Nintendo Switch</p>
-                    </div>
-                </div>
-                <input type="radio" name="images" value="Monstera" checked>
-            </label>
-            <label style="--img: url(./Assets/ft04.avif)">
-                <div class="box">
-                    <div class="gameName">
-                        <p class="gname">Super Mario Party™ Jamboree</p>
-                    </div>
-                    <div class="statusCo">
-                        <p class="status pre-order">Pre-order now</p>
-                        <p class="Co">Nintendo Switch</p>
-                    </div>
-                </div>
-                <input type="radio" name="images" value="Pothos">
-            </label>
-        </fieldset>
-    </div>
-    <div class="line"><hr/></div>
-    <div class="characters">
-        <h1 class="charHeading"> Characters</h1>
-        <div class="charSlider">
-            <img src="/Assets/arrow.png" alt="click" class="arrow">
-            <div class="switch-wrapper">
-                <img src="/Assets/switch.png" alt="nintendo-switch" class="switch">
-                <div class="btn-up align-center"><i class="fa-solid fa-caret-up"></i></div>
-                <div class="btn-down align-center"><i class="fa-solid fa-caret-down"></i></div>
-                <div class="btn-left align-center"><i class="fa-solid fa-caret-left"></i></div>
-                <div class="btn-right align-center"><i class="fa-solid fa-caret-right"></i></div>
-                <div class="char-img-wrapper-container">
-                    <div class="char-img-wrapper">
-                        <img src="/Assets/papermario.jpg" alt="char1" class="char-img">
-                        <img src="/Assets/zelda.jpg" alt="char1" class="char-img">
-                        <img src="/Assets/splatoon.jpg" alt="char1" class="char-img">
-                        <img src="/Assets/papermario.jpg" alt="char1" class="char-img">
-                        <img src="/Assets/zelda.jpg" alt="char1" class="char-img">
-                    </div>
-                </div>
+      <h1 class="featHeading">Featured</h1>
+      <fieldset>
+        <label style="--img: url(./Assets/papermario.jpg)">
+          <div class="box">
+            <div class="gameName">
+              <p class="gname">Paper Mario: The Thousand-Year Door</p>
             </div>
+            <div class="statusCo">
+              <p class="status">Available now</p>
+              <p class="Co">Nintendo Switch</p>
+            </div>
+          </div>
+          <input type="radio" name="images" value="Fiddle Leaf" />
+        </label>
+        <label style="--img: url(./Assets/ft02.avif)">
+          <div class="box">
+            <div class="gameName">
+              <p class="gname">Nintendo World Championships: NES™ Edition</p>
+            </div>
+            <div class="statusCo">
+              <p class="status pre-order">Pre-order now</p>
+              <p class="Co">Nintendo Switch</p>
+            </div>
+          </div>
+          <input type="radio" name="images" value="Pink Princess" />
+        </label>
+        <label style="--img: url(./Assets/ft03.avif)">
+          <div class="box">
+            <div class="gameName">
+              <p class="gname">The Legend of Zelda™: Echoes of Wisdom</p>
+            </div>
+            <div class="statusCo">
+              <p class="status pre-order">Pre-order now</p>
+              <p class="Co">Nintendo Switch</p>
+            </div>
+          </div>
+          <input type="radio" name="images" value="Monstera" checked />
+        </label>
+        <label style="--img: url(./Assets/ft04.avif)">
+          <div class="box">
+            <div class="gameName">
+              <p class="gname">Super Mario Party™ Jamboree</p>
+            </div>
+            <div class="statusCo">
+              <p class="status pre-order">Pre-order now</p>
+              <p class="Co">Nintendo Switch</p>
+            </div>
+          </div>
+          <input type="radio" name="images" value="Pothos" />
+        </label>
+      </fieldset>
+    </div>
+    <div class="line"><hr /></div>
+    <div class="characters">
+      <h1 class="charHeading">Characters</h1>
+      <div class="charSlider">
+        <img src="/Assets/arrow.png" alt="click" class="arrow" />
+        <div class="switch-wrapper">
+          <img src="/Assets/switch.png" alt="nintendo-switch" class="switch" />
+          <div class="btn-up align-center">
+            <i class="fa-solid fa-caret-up"></i>
+          </div>
+          <div class="btn-down align-center">
+            <i class="fa-solid fa-caret-down"></i>
+          </div>
+          <div class="btn-left align-center">
+            <i class="fa-solid fa-caret-left"></i>
+          </div>
+          <div class="btn-right align-center">
+            <i class="fa-solid fa-caret-right"></i>
+          </div>
+          <div class="char-img-wrapper-container">
+            <div class="char-img-wrapper">
+              <img src="/Assets/papermario.jpg" alt="char1" class="char-img" />
+              <img src="/Assets/zelda.jpg" alt="char1" class="char-img" />
+              <img src="/Assets/splatoon.jpg" alt="char1" class="char-img" />
+              <img src="/Assets/papermario.jpg" alt="char1" class="char-img" />
+              <img src="/Assets/zelda.jpg" alt="char1" class="char-img" />
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+    <div class="line"><hr /></div>
     <div class="store">
-
+      <h1 class="storeHeading">Online Store</h1>
+      <div class="store-showcase">
+        <div class="overlay">
+          <div class="close"><i class="fa-regular fa-circle-xmark"></i></div>
+          <p class="title"></p>
+        </div>
+        <img
+          src="./Assets/web.banner-01.png"
+          alt="background"
+          class="banner-bg"
+        />
+        <img src="/Assets/web.banner-02.png" alt="store" class="arcade" />
+        <img
+          src="/Assets/web.banner-03.png"
+          alt="controller"
+          class="controller"
+        />
+        <img src="/Assets/web.banner-04.png" alt="logo" class="m-logo" />
+        <img src="/Assets/web.banner-05.png" alt="coin" class="coin" />
+        <img src="/Assets/web.banner-06.png" alt="mario" class="jumpMario" />
+        <img src="/Assets/web.banner-07.png" alt="wire" class="wire" />
+      </div>
     </div>
 
-    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
-</body>
-
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+  </body>
 </html>
