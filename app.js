@@ -128,27 +128,27 @@ right.addEventListener("click", () => {
   }
 });
 
-arcade.addEventListener("mouseover", () => {
+arcade.addEventListener("click", () => {
   arcade.style.zIndex = "11";
   overlay.style.display = "flex";
   title.innerHTML = "Store";
 });
-mario.addEventListener("mouseover", () => {
+mario.addEventListener("click", () => {
   mario.style.zIndex = "11";
   overlay.style.display = "flex";
   title.innerHTML = "Characters";
 });
-coin.addEventListener("mouseover", () => {
+coin.addEventListener("click", () => {
   coin.style.zIndex = "11";
   overlay.style.display = "flex";
   title.innerHTML = "sales & deals";
 });
-merchandise.addEventListener("mouseover", () => {
+merchandise.addEventListener("click", () => {
   merchandise.style.zIndex = "11";
   overlay.style.display = "flex";
   title.innerHTML = "merchandise";
 });
-controller.addEventListener("mouseover", () => {
+controller.addEventListener("click", () => {
   controller.style.zIndex = "11";
   overlay.style.display = "flex";
   title.innerHTML = "gaming systems";
