@@ -141,7 +141,7 @@ mario.addEventListener("mouseover", () => {
 coin.addEventListener("mouseover", () => {
   coin.style.zIndex = "11";
   overlay.style.display = "flex";
-  title.innerHTML = "Coin";
+  title.innerHTML = "sales & deals";
 });
 merchandise.addEventListener("mouseover", () => {
   merchandise.style.zIndex = "11";
