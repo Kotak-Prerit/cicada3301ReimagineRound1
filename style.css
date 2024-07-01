@@ -861,29 +861,10 @@ a {
     right: 5%;
   }
 }
-.best-sellers {
-  min-height: 100vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-}
 
 
 
 
-
-
-
-
-
-body{
-    display: block;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
-}
 .container{
     position: relative;
     justify-content: center;
@@ -926,7 +907,7 @@ body{
     transition: 0.7s;
     cursor: pointer;
 }
-img{
+.container .card .imgbx img{
     height: 400px;
 
 }
@@ -988,7 +969,7 @@ img{
         color: #fff;
         
 }
-h1{
+section h1{
     color: #ff0202;
     text-align: center;
     font-size: 300%;
