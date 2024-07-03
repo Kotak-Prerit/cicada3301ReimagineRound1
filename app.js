@@ -1,6 +1,6 @@
 const menu = document.querySelector(".menu");
+const navbar = document.querySelector(".navbar");
 const toolbox = document.querySelector(".toolBox");
-const hamburger = document.querySelector(".hamburger");
 const slider = document.querySelector(".slider-wrapper");
 const slider_item = document.querySelector(".slider-item");
 const left = document.querySelector(".btn-left");
@@ -17,11 +17,17 @@ const controller = document.querySelector(".controller");
 const overlay = document.querySelector(".overlay");
 const vanish = document.querySelector(".close");
 const title = document.querySelector(".title");
+const line1 = document.querySelector(".top");
+const line2 = document.querySelector(".middle");
+const line3 = document.querySelector(".bottom");
 
 //Menu
 menu.addEventListener("click", function () {
   toolbox.classList.toggle("menuActive");
-  hamburger.classList.toggle("is-active");
+  line1.classList.toggle("light");
+  line2.classList.toggle("light");
+  line3.classList.toggle("light");
+  navbar.classList.toggle("menuOpen");
 });
 
 //Slider Desktop
@@ -128,6 +134,7 @@ right.addEventListener("click", () => {
   }
 });
 
+// store section
 arcade.addEventListener("click", () => {
   arcade.style.zIndex = "11";
   overlay.style.display = "flex";
@@ -162,3 +169,30 @@ vanish.addEventListener("click", () => {
   merchandise.style.zIndex = "1";
   controller.style.zIndex = "1";
 });
+
+// best seller scroll
+const productCarousel = document.getElementById("product-carousel");
+const products = productCarousel.children;
+const numProducts = products.length;
+const scrollWidth = 300;
+let currentScrollPosition = 0;
+
+function scrollLeft() {
+  currentScrollPosition -= scrollWidth;
+  if (currentScrollPosition < -1500) {
+    currentScrollPosition = -1500;
+  }
+  productCarousel.style.transform = `translateX(${currentScrollPosition}px)`;
+  console.log(currentScrollPosition);
+}
+
+function scrollRight() {
+  if (currentScrollPosition < 0) {
+    currentScrollPosition += scrollWidth;
+  }
+  productCarousel.style.transform = `translateX(${currentScrollPosition}px)`;
+  console.log(currentScrollPosition);
+}
+
+document.querySelector(".leftScroll").addEventListener("click", scrollRight);
+document.querySelector(".rightScroll").addEventListener("click", scrollLeft);

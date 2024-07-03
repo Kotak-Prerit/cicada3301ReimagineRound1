@@ -20,9 +20,10 @@
     <title>Nintedo | Re-Imagine</title>
   </head>
 
-  <body>
+  <body onload="loading()">
+    <div id="loader"></div>
     <div class="main">
-      <div class="navbar">
+      <nav class="navbar">
         <div class="logo-main align-center">
           <img src="./Assets/logo.png" alt="logo" class="logo" />
         </div>
@@ -38,12 +39,22 @@
           </div>
           <div class="cart align-center">
             <a href="#" class="align-center"
-              ><img
-                src="./Assets/cart.svg"
-                alt="cart"
+              ><svg
+                data-name="Shopping cart"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 32 32"
+                width="20"
+                role="presentation"
+                alt=""
+                data-testid="ShoppingCartIcon"
+                size="20"
                 class="cart-icon"
-                height="20px"
-            /></a>
+              >
+                <path
+                  d="M23.12 28.073a2.248 2.248 0 1 0 2.25-2.326h-.005a2.288 2.288 0 0 0-2.245 2.326zm2.397-7.29a1.728 1.728 0 0 0 1.498-.982l4.844-11.686a1.544 1.544 0 0 0-.15-1.551 1.593 1.593 0 0 0-1.349-.673H8.44l-.55-2.895A1.494 1.494 0 0 0 6.393 1.6H1.598A1.606 1.606 0 0 0 0 3.255a1.548 1.548 0 0 0 1.598 1.654h3.496L7.49 18.973l-1.098 4.706a1.67 1.67 0 0 0 .25 1.395 1.529 1.529 0 0 0 1.198.673h18.675a1.656 1.656 0 0 0 0-3.31H9.937l.4-1.654zm-18.726 7.29a2.248 2.248 0 1 0 2.25-2.326h-.005a2.288 2.288 0 0 0-2.245 2.326z"
+                ></path>
+              </svg>
+            </a>
           </div>
           <div
             class="menu align-center"
@@ -66,12 +77,13 @@
                 d="m 30,67 h 40 c 0,0 8.5,0.68551 8.5,-10.375 0,-8.292653 -6.122707,-9.002293 -8.5,-6.625 l -11.071429,11.071429"
               />
             </svg>
-            <div class="toolBox"></div>
           </div>
         </div>
-      </div>
+      </nav>
     </div>
-    <div class="slider">
+
+    <div class="toolBox"></div>
+    <section class="slider">
       <div
         class="slider-wrapper"
         data-mouse-down-at="0"
@@ -95,8 +107,10 @@
         <p>Drag</p>
         <i class="fa-solid fa-caret-right"></i>
       </div>
+    </section>
+    <div class="line">
+      <hr />
     </div>
-    <div class="line"><hr /></div>
     <div class="featured">
       <h1 class="featHeading">Featured</h1>
       <fieldset>
@@ -150,7 +164,9 @@
         </label>
       </fieldset>
     </div>
-    <div class="line"><hr /></div>
+    <div class="line">
+      <hr />
+    </div>
     <div class="characters">
       <h1 class="charHeading">Characters</h1>
       <div class="charSlider">
@@ -171,17 +187,26 @@
           </div>
           <div class="char-img-wrapper-container">
             <div class="char-img-wrapper">
-              <img src="/Assets/papermario.jpg" alt="char1" class="char-img" />
-              <img src="/Assets/zelda.jpg" alt="char1" class="char-img" />
-              <img src="/Assets/splatoon.jpg" alt="char1" class="char-img" />
-              <img src="/Assets/papermario.jpg" alt="char1" class="char-img" />
-              <img src="/Assets/zelda.jpg" alt="char1" class="char-img" />
+              <img src="/Assets/mario.gif" alt="char1" class="char-img" />
+              <img src="/Assets/zelda.gif" alt="char1" class="char-img" />
+              <img src="/Assets/kirby.gif" alt="char1" class="char-img" />
+              <img src="/Assets/pokemon.gif" alt="char1" class="char-img" />
+              <img
+                src="/Assets/animalCrossing.gif"
+                alt="char1"
+                class="char-img"
+              />
+              <img src="/Assets/metroid.gif" alt="char1" class="char-img" />
+              <img src="/Assets/splatoon.gif" alt="char1" class="char-img" />
+              <img src="/Assets/pikmin.gif" alt="char1" class="char-img" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="line"><hr /></div>
+    <div class="line">
+      <hr />
+    </div>
     <div class="store">
       <h1 class="storeHeading">Online Store</h1>
       <div class="store-showcase">
@@ -206,8 +231,168 @@
         <img src="/Assets/web.banner-07.png" alt="wire" class="wire" />
       </div>
     </div>
-    <div class="best-sellers"></div>
+    <section class="best-seller">
+      <h1 class="bsHeading">Best Sellers</h1>
+      <div class="displayWrapper">
+        <header class="displayHeader">
+          <span></span>
+          <span class="seeMore"
+            >see more <i class="fa-solid fa-arrow-up-right-from-square"></i
+          ></span>
+        </header>
+        <div class="displayProducts" id="product-carousel">
+          <div class="product">
+            <img src="./Assets/luigi.jpg" alt="image" class="displayImg" 1 />
+            <div class="info-card">
+              <div class="ic-header">
+                <p class="ic-title">Luigi's Mansion™ 2 HD</p>
+                <p class="ic-date">6/27/24</p>
+              </div>
+              <div class="ic-bottom">
+                <p class="ic-tag">New!</p>
+                <p class="rate">$59.99</p>
+                <div class="ns-heart">
+                  <p class="Co">Nintedo Switch</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="./Assets/overcooked.jpg" alt="image" class="displayImg" />
+            <div class="info-card">
+              <div class="ic-header">
+                <p class="ic-title">Overcooked! 2</p>
+                <p class="ic-date">8/7/18</p>
+              </div>
+              <div class="ic-bottom">
+                <p class="ic-tag">Sale ends: 10 days</p>
+                <p class="rate">$6.24</p>
+                <div class="ns-heart">
+                  <p class="Co">Nintedo Switch</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="./Assets/demon.jpg" alt="image" class="displayImg" />
+            <div class="info-card">
+              <div class="ic-header">
+                <p class="ic-title">Luigi's Mansion™ 2 HD</p>
+                <p class="ic-date">6/27/24</p>
+              </div>
+              <div class="ic-bottom">
+                <p class="ic-tag">New!</p>
+                <p class="rate">$59.99</p>
+                <div class="ns-heart">
+                  <p class="Co">Nintedo Switch</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="./Assets/mickey.jpg" alt="image" class="displayImg" />
+            <div class="info-card">
+              <div class="ic-header">
+                <p class="ic-title">Luigi's Mansion™ 2 HD</p>
+                <p class="ic-date">6/27/24</p>
+              </div>
+              <div class="ic-bottom">
+                <p class="ic-tag">New!</p>
+                <p class="rate">$59.99</p>
+                <div class="ns-heart">
+                  <p class="Co">Nintedo Switch</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="./Assets/jjk.jpg" alt="image" class="displayImg" />
+            <div class="info-card">
+              <div class="ic-header">
+                <p class="ic-title">Luigi's Mansion™ 2 HD</p>
+                <p class="ic-date">6/27/24</p>
+              </div>
+              <div class="ic-bottom">
+                <p class="ic-tag">New!</p>
+                <p class="rate">$59.99</p>
+                <div class="ns-heart">
+                  <p class="Co">Nintedo Switch</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="./Assets/papermario.jpg" alt="image" class="displayImg" />
+            <div class="info-card">
+              <div class="ic-header">
+                <p class="ic-title">Luigi's Mansion™ 2 HD</p>
+                <p class="ic-date">6/27/24</p>
+              </div>
+              <div class="ic-bottom">
+                <p class="ic-tag">New!</p>
+                <p class="rate">$59.99</p>
+                <div class="ns-heart">
+                  <p class="Co">Nintedo Switch</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="./Assets/luigi.jpg" alt="image" class="displayImg" />
+            <div class="info-card">
+              <div class="ic-header">
+                <p class="ic-title">Luigi's Mansion™ 2 HD</p>
+                <p class="ic-date">6/27/24</p>
+              </div>
+              <div class="ic-bottom">
+                <p class="ic-tag">New!</p>
+                <p class="rate">$59.99</p>
+                <div class="ns-heart">
+                  <p class="Co">Nintedo Switch</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <img src="./Assets/mickey.jpg" alt="image" class="displayImg" />
+            <div class="info-card">
+              <div class="ic-header">
+                <p class="ic-title">Luigi's Mansion™ 2 HD</p>
+                <p class="ic-date">6/27/24</p>
+              </div>
+              <div class="ic-bottom">
+                <p class="ic-tag">New!</p>
+                <p class="rate">$59.99</p>
+                <div class="ns-heart">
+                  <p class="Co">Nintedo Switch</p>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="scrollbuttons">
+          <div class="leftScroll">
+            <i class="fa-solid fa-arrow-left-long"></i>
+          </div>
+          <div class="rightScroll">
+            <i class="fa-solid fa-arrow-right-long"></i>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script>
+    <script>
+      function loading() {
+        loader.style.display = "none";
+      }
+    </script>
   </body>
 </html>
