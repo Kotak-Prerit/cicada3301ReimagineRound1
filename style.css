@@ -7,6 +7,27 @@
   transition: all 200ms ease;
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -247,7 +268,7 @@ body {
   margin: 80px 0 50px 0;
   overflow: hidden;
 }
-.video-heading {
+.slider-heading {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -255,6 +276,7 @@ body {
   color: #fff;
   font-weight: 500;
   font-size: 20px;
+  z-index: 2;
 }
 .slider-wrapper {
   cursor: grab;
@@ -277,37 +299,89 @@ body {
   position: relative;
 }
 .slider-item:nth-child(1) {
-  background: url(./Assets/01.png);
+  background: url(./Assets/luigis-bg.avif);
   background-size: cover;
   background-position: right;
 }
 .slider-item:nth-child(2) {
-  background: url(./Assets/02.png);
+  background: url(./Assets/system-bg.avif);
   background-size: cover;
-  background-position: right;
+  background-position: top;
 }
 .slider-item:nth-child(3) {
-  background: url(./Assets/03.png);
+  background: url(./Assets/papermario.avif);
   background-size: cover;
-  background-position: right;
+  background-position: center;
 }
 .slider-item:nth-child(4) {
   background: url(./Assets/04.jpg);
   background-size: cover;
   background-position: center;
 }
-
-.slider-item img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
+.l-logo,
+.banner-controller,
+.shadow,
+.pm-logo,
+.md-logo,
+.mpr-logo,
+.mpr-char,
+.md-char {
+  position: absolute;
 }
-
+.l-logo {
+  position: absolute;
+  bottom: 50%;
+  transform: translate(0, 50%);
+  width: 50%;
+  left: 5%;
+}
+.banner-controller {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80%;
+}
+.shadow {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 60%;
+}
+.pm-logo {
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30%;
+}
 .grabbing {
   cursor: grabbing;
 }
-
+.md-logo,
+.mpr-logo {
+  width: 35%;
+  bottom: 5%;
+  z-index: 1;
+}
+.md-logo {
+  right: 15%;
+}
+.mpr-logo {
+  left: 15%;
+}
+.md-char,
+.mpr-char {
+  bottom: 0;
+  height: 90%;
+}
+.md-char {
+  left: 5px;
+}
+.mpr-char {
+  right: 0;
+}
 .cursor {
   position: absolute;
   width: 100px;
@@ -340,6 +414,9 @@ body {
   flex-direction: column;
   display: flex;
   align-items: center;
+  background: url(/Assets/char-bg.png);
+  background-size: cover;
+  background-position: top;
 }
 
 .charHeading,
@@ -352,7 +429,9 @@ body {
   font-size: 2rem;
   width: 100%;
 }
-
+.charHeading {
+  color: #fff;
+}
 .charSlider {
   width: 75%;
   display: flex;
@@ -453,23 +532,59 @@ body {
   .charSlider {
     width: 100%;
   }
+  .mpr-logo {
+    left: 5%;
+  }
+  .md-logo {
+    right: 5%;
+  }
 }
-
-@media (min-width: 500px) and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
+  .slider-item:nth-child(3) {
+    background-position: 70% 0;
+  }
+  .pm-logo {
+    width: 40%;
+    bottom: 10px;
+    left: 20px;
+    transform: translate(0, 0);
+    top: auto;
+  }
+}
+@media screen and (max-width: 600px) {
   .switch-wrapper > .align-center > .fa-solid {
     color: #191919;
     font-size: 70%;
   }
-}
-
-@media (min-width: 600px) and (max-width: 700px) {
-  .switch-wrapper > .align-center > .fa-solid {
-    color: #191919;
-    font-size: 70%;
+  .md-char,
+  .mpr-char {
+    height: 50% !important;
+  }
+  .md-logo,
+  .mpr-logo {
+    top: 15% !important;
+  }
+  .mpr-logo {
+    left: 5px;
+  }
+  .md-logo {
+    right: 5px;
   }
 }
 
 @media screen and (max-width: 700px) {
+  .switch-wrapper > .align-center > .fa-solid {
+    color: #191919;
+    font-size: 70%;
+  }
+  .md-logo,
+  .mpr-logo {
+    bottom: auto;
+    top: 10%;
+    width: 45%;
+  }
+}
+@media screen and (max-width: 750px) {
   .search {
     display: none;
   }
@@ -492,8 +607,40 @@ body {
     display: flex;
     color: #e60012;
   }
+  .cursor {
+    display: none;
+  }
+  .banner-controller {
+    width: 85%;
+    height: auto;
+  }
+  .pm-logo {
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 45%;
+  }
 }
-
+@media screen and (max-width: 850px) {
+  .l-logo {
+    bottom: 20%;
+    left: 10%;
+    width: 80%;
+  }
+  .md-char,
+  .mpr-char {
+    height: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .slider-item:nth-child(3) {
+    background: url(/Assets/papermario-mobile.avif);
+    background-size: cover;
+    background-position: top center;
+  }
+  .pm-logo {
+    width: 70%;
+  }
+}
 .featured {
   margin-block: 50px;
   padding-inline: 2.5vw;
@@ -540,13 +687,19 @@ fieldset {
     flex-direction: column;
     padding: 20px 10px;
   }
-
+  .gameName {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
   .gname {
     color: #000;
     font-weight: 700;
     cursor: pointer;
   }
-
+  .down-arrow {
+    margin-right: 10px;
+  }
   .gname:hover {
     color: #e60012;
   }
@@ -705,6 +858,7 @@ a {
   height: calc(100vh - 90px);
   position: relative;
   overflow: hidden;
+  background: linear-gradient(#fff 1%, #000);
 }
 
 .banner-bg {
@@ -890,7 +1044,7 @@ a {
 }
 
 .bsHeading {
-  margin-block: 5vh;
+  margin: 5vh 0 1.5vh 0;
 }
 .best-seller {
   margin-top: 10vh;
@@ -939,7 +1093,6 @@ a {
 .displayProducts {
   display: flex;
   gap: 20px;
-  width: 100%;
   margin-top: 20px;
 }
 

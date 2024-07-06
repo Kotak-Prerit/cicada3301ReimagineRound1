@@ -20,6 +20,8 @@ const title = document.querySelector(".title");
 const line1 = document.querySelector(".top");
 const line2 = document.querySelector(".middle");
 const line3 = document.querySelector(".bottom");
+const box1 = document.querySelectorAll(".box1");
+const arrowDown = document.querySelector(".down-arrow");
 
 //Menu
 menu.addEventListener("click", function () {
@@ -160,7 +162,9 @@ controller.addEventListener("click", () => {
   overlay.style.display = "flex";
   title.innerHTML = "gaming systems";
 });
-
+overlay.addEventListener("click", () => {
+  overlay.style.display = "none";
+});
 vanish.addEventListener("click", () => {
   overlay.style.display = "none";
   arcade.style.zIndex = "1";
@@ -178,12 +182,41 @@ const scrollWidth = 300;
 let currentScrollPosition = 0;
 
 function scrollLeft() {
+  const screenWidth = window.innerWidth;
+  let newScrollPosition = -1500;
+  if (screenWidth < 1150) {
+    newScrollPosition = -1600;
+  }
+  if (screenWidth < 1050) {
+    newScrollPosition = -1700;
+  }
+  if (screenWidth < 950) {
+    newScrollPosition = -1800;
+  }
+  if (screenWidth < 850) {
+    newScrollPosition = -1900;
+  }
+  if (screenWidth < 750) {
+    newScrollPosition = -2000;
+  }
+  if (screenWidth < 650) {
+    newScrollPosition = -2100;
+  }
+  if (screenWidth < 550) {
+    newScrollPosition = -2200;
+  }
+  if (screenWidth < 450) {
+    newScrollPosition = -2300;
+  }
+  if (screenWidth < 350) {
+    newScrollPosition = -2400;
+  }
+
   currentScrollPosition -= scrollWidth;
-  if (currentScrollPosition < -1500) {
-    currentScrollPosition = -1500;
+  if (currentScrollPosition < newScrollPosition) {
+    currentScrollPosition = newScrollPosition;
   }
   productCarousel.style.transform = `translateX(${currentScrollPosition}px)`;
-  console.log(currentScrollPosition);
 }
 
 function scrollRight() {
@@ -191,8 +224,22 @@ function scrollRight() {
     currentScrollPosition += scrollWidth;
   }
   productCarousel.style.transform = `translateX(${currentScrollPosition}px)`;
-  console.log(currentScrollPosition);
 }
 
 document.querySelector(".leftScroll").addEventListener("click", scrollRight);
 document.querySelector(".rightScroll").addEventListener("click", scrollLeft);
+
+arrowDown.addEventListener("click", () => {
+  box1.style.transform = "translateY(-60%)";
+  console.log("clicked");
+});
+
+// Smooth scrolling (Lenis) :
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
