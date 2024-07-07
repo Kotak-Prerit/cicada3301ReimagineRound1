@@ -21,7 +21,6 @@ const line1 = document.querySelector(".top");
 const line2 = document.querySelector(".middle");
 const line3 = document.querySelector(".bottom");
 const box1 = document.querySelectorAll(".box1");
-const arrowDown = document.querySelector(".down-arrow");
 
 //Menu
 menu.addEventListener("click", function () {
@@ -164,6 +163,11 @@ controller.addEventListener("click", () => {
 });
 overlay.addEventListener("click", () => {
   overlay.style.display = "none";
+  arcade.style.zIndex = "1";
+  coin.style.zIndex = "1";
+  mario.style.zIndex = "2";
+  merchandise.style.zIndex = "1";
+  controller.style.zIndex = "1";
 });
 vanish.addEventListener("click", () => {
   overlay.style.display = "none";
@@ -176,8 +180,11 @@ vanish.addEventListener("click", () => {
 
 // best seller scroll
 const productCarousel = document.getElementById("product-carousel");
+const productCarousel2 = document.getElementById("product-carousel2");
 const products = productCarousel.children;
+const products2 = productCarousel2.children;
 const numProducts = products.length;
+const numProducts2 = products2.length;
 const scrollWidth = 300;
 let currentScrollPosition = 0;
 
@@ -219,20 +226,61 @@ function scrollLeft() {
   productCarousel.style.transform = `translateX(${currentScrollPosition}px)`;
 }
 
+function scrollLeft02() {
+  const screenWidth = window.innerWidth;
+  let newScrollPosition = -1500;
+  if (screenWidth < 1150) {
+    newScrollPosition = -1600;
+  }
+  if (screenWidth < 1050) {
+    newScrollPosition = -1700;
+  }
+  if (screenWidth < 950) {
+    newScrollPosition = -1800;
+  }
+  if (screenWidth < 850) {
+    newScrollPosition = -1900;
+  }
+  if (screenWidth < 750) {
+    newScrollPosition = -2000;
+  }
+  if (screenWidth < 650) {
+    newScrollPosition = -2100;
+  }
+  if (screenWidth < 550) {
+    newScrollPosition = -2200;
+  }
+  if (screenWidth < 450) {
+    newScrollPosition = -2300;
+  }
+  if (screenWidth < 350) {
+    newScrollPosition = -2400;
+  }
+
+  currentScrollPosition -= scrollWidth;
+  if (currentScrollPosition < newScrollPosition) {
+    currentScrollPosition = newScrollPosition;
+  }
+  productCarousel2.style.transform = `translateX(${currentScrollPosition}px)`;
+}
+
 function scrollRight() {
   if (currentScrollPosition < 0) {
     currentScrollPosition += scrollWidth;
   }
   productCarousel.style.transform = `translateX(${currentScrollPosition}px)`;
 }
+function scrollRight02() {
+  if (currentScrollPosition < 0) {
+    currentScrollPosition += scrollWidth;
+  }
+  productCarousel2.style.transform = `translateX(${currentScrollPosition}px)`;
+}
 
-document.querySelector(".leftScroll").addEventListener("click", scrollRight);
-document.querySelector(".rightScroll").addEventListener("click", scrollLeft);
-
-arrowDown.addEventListener("click", () => {
-  box1.style.transform = "translateY(-60%)";
-  console.log("clicked");
-});
+document.querySelector(".ls01").addEventListener("click", scrollRight);
+document.querySelector(".ls02").addEventListener("click", scrollRight02);
+document.querySelector(".rs01").addEventListener("click", scrollLeft);
+document.querySelector(".rs02").addEventListener("click", scrollLeft02);
 
 // Smooth scrolling (Lenis) :
 const lenis = new Lenis();

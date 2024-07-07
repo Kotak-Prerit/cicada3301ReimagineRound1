@@ -95,7 +95,7 @@ body {
   border: none;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
-  color: #e60012;
+  color: #000;
   background: transparent;
 }
 
@@ -265,7 +265,7 @@ body {
   height: calc(100vh - 180px);
   position: relative;
   width: 100%;
-  margin: 80px 0 50px 0;
+  margin: 80px 0;
   overflow: hidden;
 }
 .slider-heading {
@@ -418,7 +418,9 @@ body {
   background-size: cover;
   background-position: top;
 }
-
+.l02 {
+  margin-top: 10vh;
+}
 .charHeading,
 .featHeading,
 .storeHeading,
@@ -528,121 +530,11 @@ body {
 .line {
   padding-inline: 2.5vw;
 }
-@media screen and (max-width: 1000px) {
-  .charSlider {
-    width: 100%;
-  }
-  .mpr-logo {
-    left: 5%;
-  }
-  .md-logo {
-    right: 5%;
-  }
-}
-@media screen and (max-width: 1100px) {
-  .slider-item:nth-child(3) {
-    background-position: 70% 0;
-  }
-  .pm-logo {
-    width: 40%;
-    bottom: 10px;
-    left: 20px;
-    transform: translate(0, 0);
-    top: auto;
-  }
-}
-@media screen and (max-width: 600px) {
-  .switch-wrapper > .align-center > .fa-solid {
-    color: #191919;
-    font-size: 70%;
-  }
-  .md-char,
-  .mpr-char {
-    height: 50% !important;
-  }
-  .md-logo,
-  .mpr-logo {
-    top: 15% !important;
-  }
-  .mpr-logo {
-    left: 5px;
-  }
-  .md-logo {
-    right: 5px;
-  }
-}
-
-@media screen and (max-width: 700px) {
-  .switch-wrapper > .align-center > .fa-solid {
-    color: #191919;
-    font-size: 70%;
-  }
-  .md-logo,
-  .mpr-logo {
-    bottom: auto;
-    top: 10%;
-    width: 45%;
-  }
-}
-@media screen and (max-width: 750px) {
-  .search {
-    display: none;
-  }
-  .searchbar {
-    min-width: auto;
-    align-items: center;
-    border: none;
-  }
-  .menuOpen .slscm .searchbar {
-    border: none;
-  }
-  .menuOpen .slscm .login-Signup {
-    margin-left: 20px;
-  }
-  .ls {
-    display: none;
-  }
-
-  .login-Signup > .fa-solid {
-    display: flex;
-    color: #e60012;
-  }
-  .cursor {
-    display: none;
-  }
-  .banner-controller {
-    width: 85%;
-    height: auto;
-  }
-  .pm-logo {
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 45%;
-  }
-}
-@media screen and (max-width: 850px) {
-  .l-logo {
-    bottom: 20%;
-    left: 10%;
-    width: 80%;
-  }
-  .md-char,
-  .mpr-char {
-    height: 80%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .slider-item:nth-child(3) {
-    background: url(/Assets/papermario-mobile.avif);
-    background-size: cover;
-    background-position: top center;
-  }
-  .pm-logo {
-    width: 70%;
-  }
+.l01 {
+  margin-top: 15vh;
 }
 .featured {
-  margin-block: 50px;
+  margin-block: 50px 15vh;
   padding-inline: 2.5vw;
 }
 
@@ -916,7 +808,7 @@ a {
   z-index: 1;
 }
 .overlay {
-  background: #0000007c;
+  background: #00000092;
   height: 100vh;
   width: 100%;
   position: absolute;
@@ -944,6 +836,17 @@ a {
   color: #fff;
   font-size: 30px;
 }
+.title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  z-index: 15;
+}
+.title-wrapper .fa-arrow-up-right-from-square {
+  color: #fff;
+  font-size: 1.5rem;
+}
 @media screen and (max-width: 950px) {
   .coin {
     width: 150px;
@@ -970,6 +873,12 @@ a {
     width: 150px;
     top: 120px;
     left: 170px;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .m-logo {
+    height: 80px;
   }
 }
 @media screen and (max-width: 575px) {
@@ -1043,11 +952,8 @@ a {
   }
 }
 
-.bsHeading {
-  margin: 5vh 0 1.5vh 0;
-}
 .best-seller {
-  margin-top: 10vh;
+  margin-top: 15vh;
   padding: 0 2.5vw 20px 2.5vw;
 }
 .displayWrapper {
@@ -1056,24 +962,22 @@ a {
 .displayHeader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   border-bottom: 1px solid #000;
   padding-bottom: 5px;
-  flex-wrap: wrap;
 }
 
 .seeMore {
   text-transform: uppercase;
   font-weight: 500;
-  font-size: 14px;
-}
-.seeMore {
+  width: 30%;
   color: #000;
   text-transform: uppercase;
   font-weight: 300;
   font-size: 16px;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 5px;
   transition: all 0.2s ease;
   cursor: pointer;
@@ -1097,7 +1001,7 @@ a {
 }
 
 .product {
-  height: 500px;
+  height: 452px;
   min-width: 306px;
   object-fit: cover;
   position: relative;
@@ -1105,11 +1009,12 @@ a {
   border-left: 1px solid #000;
   border-right: 1px solid #000;
   overflow: hidden;
+  transition: all 0.6s ease;
 }
 
 .displayImg {
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
   object-fit: cover;
 }
 .scrollbuttons {
@@ -1125,7 +1030,7 @@ a {
 .rightScroll {
   height: 100%;
   width: 50%;
-  background: #000;
+  background: #e60012;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1133,7 +1038,7 @@ a {
 }
 .leftScroll:hover,
 .rightScroll:hover {
-  background: #e60012;
+  background: #000;
 }
 /* .leftScroll:hover .fa-solid,.rightScroll:hover .fa-solid{
   co
@@ -1144,10 +1049,10 @@ a {
   font-size: 25px;
 }
 .info-card {
-  height: 40%;
+  height: 50%;
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -100%;
   left: 0;
   background: #fff;
   box-shadow: 0 0 15px 5px #000;
@@ -1155,6 +1060,10 @@ a {
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
+  transition: all 600ms ease;
+}
+.product:hover .info-card {
+  bottom: 0;
 }
 .ic-header {
   width: 100%;
@@ -1182,6 +1091,12 @@ a {
   width: fit-content;
   border-radius: 100px;
 }
+.sb {
+  background: #4b5cce;
+}
+.fd {
+  background: #9531b9;
+}
 .rate {
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
@@ -1193,11 +1108,457 @@ a {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+}
+.ns-heart:hover .fa-heart {
+  color: #95000c;
 }
 .ns-heart .Co {
   margin-top: 0;
 }
 .fa-heart {
   color: #e60012;
+  font-size: 24px;
+}
+
+@media screen and (max-width: 1000px) {
+  .charSlider {
+    width: 100%;
+  }
+  .mpr-logo {
+    left: 5%;
+  }
+  .md-logo {
+    right: 5%;
+  }
+  .info-card {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .slider-item:nth-child(3) {
+    background-position: 70% 0;
+  }
+  .pm-logo {
+    width: 40%;
+    bottom: 10px;
+    left: 20px;
+    transform: translate(0, 0);
+    top: auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .switch-wrapper > .align-center > .fa-solid {
+    color: #191919;
+    font-size: 70%;
+  }
+  .md-char,
+  .mpr-char {
+    height: 50% !important;
+  }
+  .md-logo,
+  .mpr-logo {
+    top: 15% !important;
+  }
+  .mpr-logo {
+    left: 5px;
+  }
+  .md-logo {
+    right: 5px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .switch-wrapper > .align-center > .fa-solid {
+    color: #191919;
+    font-size: 70%;
+  }
+  .md-logo,
+  .mpr-logo {
+    bottom: auto;
+    top: 10%;
+    width: 45%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .search {
+    display: none;
+  }
+  .searchbar {
+    min-width: auto;
+    align-items: center;
+    border: none;
+  }
+  .menuOpen .slscm .searchbar {
+    border: none;
+  }
+  .menuOpen .slscm .login-Signup {
+    margin-left: 20px;
+  }
+  .ls {
+    display: none;
+  }
+
+  .login-Signup > .fa-solid {
+    display: flex;
+    color: #e60012;
+  }
+  .cursor {
+    display: none;
+  }
+  .banner-controller {
+    width: 85%;
+    height: auto;
+  }
+  .pm-logo {
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 45%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .l-logo {
+    bottom: 20%;
+    left: 10%;
+    width: 80%;
+  }
+  .md-char,
+  .mpr-char {
+    height: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .slider-item:nth-child(3) {
+    background: url(/Assets/papermario-mobile.avif);
+    background-size: cover;
+    background-position: top center;
+  }
+  .pm-logo {
+    width: 70%;
+  }
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+  gap: 30px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  margin: 50px;
+}
+.footer-main a {
+  text-decoration: none;
+  display: block;
+  color: red;
+}
+.logo {
+  height: 35px;
+}
+.footer-main h4 {
+  font-size: 1.125rem;
+  color: rgb(72, 72, 72);
+  font-weight: 700;
+}
+.footer-main span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ff0419;
+  line-height: 1.4;
+  position: relative;
+  transition: all ease 0.5s;
+}
+.section {
+  border-left: 1px solid lightgray;
+  padding-left: 20px;
+  display: block;
+  height: fit-content;
+}
+.section a {
+  margin-top: 8px;
+}
+.section a:last-child {
+  margin-bottom: 10px;
+}
+.section a span {
+  font-weight: 600;
+  width: 150px;
+  display: block;
+}
+.section a span:hover {
+  text-decoration: underline;
+  color: #ad000e;
+}
+.about-nintendo {
+  margin-left: 40px;
+}
+@media screen and (max-width: 375px) {
+  .section:nth-child(1) {
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .about-nintendo {
+    margin-left: 0px;
+  }
+}
+
+.section:nth-child(1) {
+  border: none;
+}
+.container {
+  max-width: 1340px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.footer-header {
+  background-color: #e60012;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 2.5vw;
+  padding-block: 20px;
+  flex-wrap: wrap;
+  margin-top: 20vh;
+}
+.social-icons i {
+  color: #fff;
+  font-size: 30px;
+}
+.social-icons ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+.social-icons ul li a:hover {
+  font-size: 70px;
+  transition: 0.25s ease;
+  color: #e9f5ff;
+}
+.social-icons ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: #000;
+  backdrop-filter: blur(2);
+  margin: 0 5px;
+  text-decoration: none;
+  font-size: 30px;
+  border-radius: 50%;
+}
+.link .js-tilt-glare {
+  border-radius: 50%;
+}
+.social-icons ul li .facebook:hover {
+  background: #1877f2;
+}
+.social-icons ul li .instagram:hover {
+  background: #e4405f;
+}
+.social-icons ul li .twitter:hover {
+  background: #346d9b;
+}
+.social-icons ul li .youtube:hover {
+  background: #ff0419;
+}
+.facebook:hover i,
+.instagram:hover i,
+.twitter:hover i,
+.youtube:hover i {
+  transform: scale(2);
+}
+
+.privacy-certified {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-inline: 2.5vw;
+  width: 100%;
+}
+.pc {
+  height: 86px;
+  margin-block: 20px;
+}
+.copyright {
+  display: flex;
+  padding: 2vh 2vw;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #242424;
+}
+.copyright-sent {
+  width: 35%;
+  font-size: 12px;
+}
+.footer-copyright-links {
+  display: flex;
+}
+.footer-copyright-links ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.footer-copyright-links ul li {
+  font-size: 12px;
+}
+.footer-copyright-links ul li a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+}
+.footer-copyright-links ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: #e60012;
+  left: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.footer-copyright-links ul li:hover a::after {
+  opacity: 1;
+}
+.langauge {
+  display: flex;
+  width: 20%;
+}
+.language .currentlanguage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.fa-globe {
   font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .copyright-sent {
+    width: 100%;
+  }
+  .footer-header {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .social-icons {
+    margin-top: 5vh;
+  }
+  .footer-logo .logo {
+    height: 50px;
+  }
+}
+.cicada3301 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+}
+.c-love {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  gap: 5px;
+}
+.c-love i {
+  color: red;
+}
+.c-love span {
+  color: green;
+  font-weight: 700;
+}
+.toolbox-links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: calc(100vh - 100px);
+  width: 100%;
+}
+.toolbox-main-links {
+  position: absolute;
+  bottom: 3vh;
+  left: 2.5vw;
+}
+.toolbox-main-links ul {
+  list-style: none;
+}
+.toolbox-main-links ul li {
+  font-size: 280%;
+  text-transform: uppercase;
+}
+.nintendo-store {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.nintendo-store:hover {
+  color: #95000c;
+}
+.nintendo-store i {
+  font-size: 100%;
+}
+.toolbox-extras {
+  position: absolute;
+  bottom: 3vh;
+  right: 2.5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 50px;
+}
+.toolbox-socials-heading p,
+.toolbox-others-heading p {
+  margin-bottom: 15px;
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.toolbox-socials ul,
+.others ul {
+  list-style: none;
+}
+.toolbox-socials ul li a,
+.others ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  line-height: 1;
+  font-weight: 500;
+}
+.toolbox-socials ul li a:hover,
+.others ul li a:hover {
+  color: #ad000e;
+}
+.others ul li a i {
+  color: #fff;
+  font-size: 100%;
+}
+@media screen and (max-width: 1050px) {
+  .copyright {
+    flex-direction: column;
+    gap: 40px;
+    padding-block: 20px;
+  }
+  .copyright-sent {
+    width: 50%;
+    text-align: center;
+  }
+  .toolbox-main-links {
+    top: 5vh;
+  }
+  .toolbox-main-links ul li {
+    font-size: 150%;
+  }
 }
