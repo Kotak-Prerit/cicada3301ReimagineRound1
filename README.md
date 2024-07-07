@@ -1,4 +1,4 @@
-ReImgining Nintendo
+ReImagining Nintendo
 
 Re-designing Nintendo's OG website and giving it modern touch.
 As we were going through its site we noticed few things, one of it’s being its visuals and its playfulness which Nintendo is known for,
